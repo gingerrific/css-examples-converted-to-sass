@@ -1,0 +1,1225 @@
+// CSS Homework. Converted into SASS //
+
+body {
+	font-family: "Helvetica Neue";
+
+}
+
+// Container for each individual effect and page spacing //
+.example-box {
+	margin-top: 2em;
+	position: relative;
+	p {
+		margin-bottom: 10px;
+	}
+}
+
+// Creates a margin at the top for the fixed header
+.example-box-one {
+	margin-top: 6em;
+}
+/*Example one - Square Transition*/
+// Square changes into a circle with inverse colors on hover//
+
+.example-box-square-transition {
+height: 70px;
+}
+
+.square-transition {
+	height: 50px;
+	width: 50px;
+	background-color: #ff6200;
+	border-radius: 4px;
+	box-shadow: inset 0 0 .1px 4px #00c599;
+	transition: all .75s ease;
+	
+	&:hover {
+		height: 65px;
+		width: 65px;
+		background-color: #00c599;
+		box-shadow: inset 0 0 .1px 4px #ff6200;
+		border-radius: 100%;
+	}
+}
+
+
+/*Example two - popout hover*/
+// 3 seperate drawers pop out using padding movement //
+
+.example-box p a {
+	font-style: italic;
+}
+
+.main-drawer-slide-out{ 
+	margin-top: .25em;
+	height: 2em;
+	width: 10em;
+	background-color: #5B5BD9;
+	border-radius: .4em;
+	box-shadow: .1em .1em .1em #272761;
+	text-align: center;
+	font-family: Helvetica;
+	color: #fff;
+	line-height: 2em;
+	text-shadow: .05em .07em 0em  #4D4DBD;
+	font-weight: bolder;
+	transition: all .4s .1s ease;
+
+	&:hover {
+		padding-left:5em;
+	}
+}
+
+
+/*Example 3 - Click button menu */
+// 3 separate vertical menu options with a button effect //
+
+.click-button-container {
+	position: relative;
+	height: 2em;
+	width: 10em;
+	margin-bottom: .3em;
+
+}
+
+.click-button-menu {
+	position: absolute;
+	height: 2em;
+	width: 10em;
+   	bottom: 0;
+	border-radius: .4em;
+	background-color: #5B5BD9;
+	line-height: 1.7em;
+	text-align: center;
+	font-family: Helvetica;
+	font-weight: bolder;
+	color: #fff;
+   	cursor: default;
+    transition: all .2s ease;    
+	text-shadow: 	  0 	-.05em 	.01em 	#272761;
+	box-shadow: inset 0 	-.25em 	0 		#272761,
+					  -.05em .08em 	.1em 	rgb(111, 111, 126);
+	
+	&:hover {
+		height: 1.86em;
+		box-shadow: inset 	0 		-.15em 	0 		#272761,
+							-.05em 	.08em 	.1em 	rgb(111, 111, 126);
+	}
+}
+
+
+/*Example 4 - Outward Outline */
+// Exanding box shadows on hover //
+
+.outline-button-container {
+	position: relative;
+	height: 2em;
+	width: 10em;
+	margin-bottom: .75em;
+}
+
+.outline-button-menu {
+   	position: absolute;
+   	bottom: 0;
+	height: 2em;
+	width: 10em;
+	background-color: #5B5BD9;
+	text-align: center;
+	line-height: 2em;
+	font-family: Helvetica;
+	color: #fff;
+	font-weight: bolder;
+	text-shadow: .05em .07em 0em  #4D4DBD;
+    transition: all .2s ease;    
+   	cursor: default;
+	
+   	&:hover {
+   		height: 2.2em;
+   		width: 10.2em;
+   		box-shadow: 0 0 0 .2em #fff,
+   					0 0 0 .4em #5B5BD9;
+   	}
+}
+
+// Example 5 - Rolling squares //
+// Squares that roll and transform into circles and different rates//
+
+.sonic-effect{
+	width:5em;
+    height:5em;
+    background:#5B5BD9;
+    transition:all 0.6s ease;
+
+    &:hover {
+    	-webkit-transform: rotate(90deg);
+    	
+    }
+}
+// On hover of container, each element will go a different distance/speed
+.sonic-effect-container:hover {
+	.square-ball-one {
+		transition:all 0.9s ease;
+		border-radius: 100%;
+		-webkit-transform: translate(22em);
+	}
+
+	.square-ball-two {
+		transition:all 1.3s ease;
+		border-radius: 100%;
+		-webkit-transform: translate(14em);
+	}
+
+	.square-ball-three {
+		border-radius: 100%;
+		-webkit-transform: translate(5em);
+	}
+}
+
+
+/* Example six - Spinning squares on hover */
+// Hover over a sqaure to make it spin. Mild "gear" effect //
+
+
+.crazy-spinning-box {
+	display: inline-block;
+	width: 5em;
+	height: 5em;
+    margin-right: .9em;
+	background:#5B5BD9;
+    transition:all 1.9s ease;
+
+    &:hover {
+    	-webkit-transform: rotate(360deg);
+    }
+}
+
+
+/*Example 7 - Monsters */
+// Div art created monster that rocks back and forth and "talks" //
+
+
+.monster-body {
+	position: relative;
+	height: 10em;
+	width: 10em;
+	border-radius: 100%;
+	background: #f9c667; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #f9c667 45%, #f79621 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(45%,#f9c667), color-stop(100%,#f79621)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #f9c667 45%,#f79621 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #f9c667 45%,#f79621 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #f9c667 45%,#f79621 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #f9c667 45%,#f79621 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9c667', endColorstr='#f79621',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	z-index: 5;
+	-webkit-animation:monstertilt 4s infinite linear;
+		    animation:monstertilt 4s infinite linear;
+
+	.monster-eye {
+		height: 1em;
+		width: .5em;
+		background-color: black;
+		border-radius: 110%;
+		display: inline-block;
+		margin-top: 2.65em;
+	}
+
+	.eye-one{
+		margin-left: 42%;
+	}
+
+	.eye-two {	
+		margin-right: 42%;
+		float: right;
+	}
+
+	.monster-mouth {
+		margin-top: 1.3em;
+		margin-left: 21%;
+		height: 1em;
+		width: 5em;
+		background-color: black;
+		border-radius: .4em .4em 50% 50%;
+		box-shadow: 0 0 0 .1em black;
+		z-index: 100;
+		-webkit-animation:monster-mouth-jabber .2s infinite linear;
+			    animation:monster-mouth-jabber .2s infinite linear;
+	}
+}
+
+.monster-shadow {
+	position: absolute;
+	bottom:4.6em;
+	width: 7em;
+	height: .55em;
+	border-radius: 100%;
+	background-color: rgba(0,0,0,.1);
+	-webkit-animation:shadowmove 4s infinite linear;
+    		animation:shadowmove 4s infinite linear;
+}
+
+@-webkit-keyframes monster-mouth-jabber {
+	0%, 100% {height: 1em;}
+		 25% {height: 1.25em;}
+		 50% {height: 1.5em;}
+		 75% {height: 1.25em;}
+}
+
+@keyframes monster-mouth-jabber {
+	0%, 100% {height: 1em;}
+		 25% {height: 1.25em;}
+		 50% {height: 1.5em;}
+		 75% {height: 1.25em;}
+}
+
+@-webkit-keyframes shadowmove { 
+		  0% {left: 5%}
+		 25% {left: 5.25%;}
+		 50% {left: 5.5%;}
+		 75% {left: 5.25%;}
+		100% {left: 5%;}
+}
+
+@keyframes shadowmove {
+    	  0% {left: 5%}
+    	 25% {left: 5.25%;}
+   	  50% {left: 5.5%;}
+   	  75% {left: 5.25%;}
+   	 100% {left: 5%;}
+}
+  
+
+@-webkit-keyframes monstertilt{
+    
+    0% {-webkit-transform: rotate(0deg); left: 0%}
+    25% {-webkit-transform: rotate(7deg);left: 5.25%;}
+    50% {-webkit-transform: rotate(0deg);left: 0%}
+    75% {-webkit-transform: rotate(-7deg);left: -5.25%;}
+    100% {-webkit-transform: rotate(0deg);left: 0%}
+}
+
+@keyframes monstertilt {
+    
+    0% {transform: rotate(0deg); left: 0%}
+    25% {transform: rotate(7deg);left: 5.25%;}
+    50% {transform: rotate(0deg);left: 0%}
+    75% {transform: rotate(-7deg);left: -5.25%;}
+    100% {transform: rotate(0deg);left: 0%}
+}
+
+/*Example 8 - click for inspiration */
+//  Text input field that activates an arrow and light bulb transition //
+
+
+.input-field input {
+	display: inline-block;
+	font-family: Helvetica;
+	font-size: 14px;
+	
+	span {
+		opacity: 1;
+	}
+
+	&:focus ~ span {
+		margin-left: 54.35%;
+		opacity: 0;
+		transition: margin-left	1.5s 		ease-in-out,
+						opacity	0.1s 1.5s 	linear;
+	}
+
+	&:focus ~ .lightbulb {
+		opacity: 1;
+		transition: 		all 0.1s 1.5s 	linear;
+	}
+}
+
+
+.lightbulb {
+	float: right;
+	margin-right: 25%;
+	height: 1.6em;
+	width: 1.6em;
+	padding-top: .3em;
+	display: inline-block;
+	background-image: url(/assets/images/light-bulb.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	opacity: 0;
+}
+
+
+/*Example 9 - Sprite sheet */
+// Spirte sheet animations using a steps() key frame. //
+//One in which the vertical and horizontal elements are used, sonic only uses horizontal movement //
+
+// Height and width of each sprite "frame" //
+.spelunky, .sonic-sprite-sheet {
+	width: 80px;
+    height: 80px;
+    display: inline-block;
+}
+
+// Spelunky based sprite //
+.spelunky {
+   	background-image: url(/assets/images/patrick-spelunky.png);
+	background-position-y: 0px;
+    -webkit-animation: play-x 	 1.8s steps(10) infinite,
+    				   play-y 	10.8s steps(10) infinite;
+    		animation: play-x 	 1.8s steps(10) infinite,
+    				   play-y 	10.8s steps(10) infinite;
+}
+
+// Steps() animation that moves across the x-axis to each sprite based on background display position //
+@-webkit-keyframes play-x {
+   from { background-position-x:    0px; }
+     to { background-position-x: -800px; }
+}
+
+@keyframes play-x {
+   from { background-position-x:    0px; }
+     to { background-position-x: -800px; }
+}
+// Steps() animation that moves aross the y-axis on a delay in order to switch to the next row of sprites //
+@-webkit-keyframes play-y {
+   from { background-position-y:    0px; }
+     to { background-position-y: -800px; }
+}
+
+@keyframes play-y {
+   from { background-position-y:    0px; }
+     to { background-position-y: -800px; }
+}
+
+// SOnic rolling sprite //
+.sonic-sprite-sheet {
+    background-image: url(/assets/images/sonic.png);
+	background-position-y: -80px;
+    -webkit-animation: sonic-x 1.8s steps(11) infinite;
+    		animation: sonic-x 1.8s steps(11) infinite;
+}
+
+@-webkit-keyframes sonic-x {
+   from { background-position-x:    0px; }
+     to { background-position-x: -880px; }
+}
+
+@keyframes sonic-x {
+   from { background-position-x:    0px; }
+     to { background-position-x: -880px; }
+}
+
+
+/*Example 10 - SVG Drawing animation*/
+// Using stroke length to animate an SVG illustration //
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: draw-yourself 3s linear alternate infinite;
+  		  animation: draw-yourself 3s linear alternate infinite;
+}
+
+// Moving the dash off set slowly away from the end of the SVG to fake "draw" the image //
+
+@-webkit-keyframes draw-yourself {
+  to {
+    stroke-dashoffset: 0;
+  }
+ }
+@keyframes draw-yourself {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/*Example 11 - moving placeholder*/
+// Place-holder text "slides down" when cursor selects window //
+
+// Styled text box with "hidden text" that descends.
+.floating-text-input {
+	height: 6em;
+	width: 14em;
+	border-radius: .4em;
+	background-color: #5B5BD9;
+	text-align: center;
+	line-height: 1.7em;
+	font-family: Helvetica;
+	color: #fff;
+    transition: all .2s ease; 
+	box-shadow: inset 0 	-.25em 	0 	#272761,
+					  -.05em .08em .1em rgb(111, 111, 126);
+    display: inline-block;  
+
+    .floating-input {
+    	width: 14em;
+    	height: 1.9em;
+    	margin-top: 2em;
+    }
+    // Not visitble until above text field is focused //
+    .hidden-text {
+	opacity: 0;
+	margin-top: -.6em; 
+	margin-right: 1em;
+	font-size: 12px;
+	transition: all .4s .1s linear;
+	z-index: -2;
+	}
+}
+
+#name-field{
+	width: 14em;
+	border-radius: .4em;
+	font-size: 12px;
+	font-family: Helvetica;
+	z-index: 1;
+	color: #fff;
+
+	&:focus ~ .hidden-text {
+		opacity: 1;
+		margin-top: -.2em;
+	}
+}
+
+
+[placeholder]:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+
+/*Example 12 - cosby sweater - text tooplip*/
+// On hover, fly-in tool tip with message //
+ 
+.cosby {
+    position: relative;
+
+    &:before, &:after {
+	position: absolute;
+	opacity: 0;
+	white-space: nowrap;
+	font-weight: bolder;
+	color: #FFF;
+	}
+	// Left arrow element //
+    &:before {
+    left: 100%;
+    top: 210%;
+    content: "";
+    border-bottom: 10px solid transparent;
+       border-top: 10px solid transparent;
+     border-right: 20px solid #98ff98;
+    -webkit-transition: all 0.4s ease;
+    }
+    // Right element with text //
+    &:after {
+    	bottom: 130%;
+    	left: 113%;
+    	padding: 5px 15px;
+    	content: attr(data-tooltip);
+    	background: #98ff98;
+    	-webkit-border-radius: 10px;
+       	   -moz-border-radius: 10px;
+    	        border-radius: 10px;
+    	   -webkit-transition: all 0.4s ease;
+    } 
+    // Hover elements: on hover, fly in //
+    &:hover:after, 
+    &:hover:before {
+    opacity: 1;
+	}
+
+    &:hover:after {
+    bottom: -35%;
+    }
+
+    &:hover:before {
+    top: 0;
+    }
+
+}
+
+
+/*Example 13 - pop out drawers with pseudo drop down // 
+// 3 seperate drawers pop out using padding movement*/
+
+.better-drawer{ 
+	margin-top: .25em;
+	height: 2em;
+	width: 10em;
+	background-color: #5B5BD9;
+	border-radius: .4em;
+	box-shadow: .1em .1em .1em #272761;
+	text-align: center;
+	font-family: Helvetica;
+	color: #fff;
+	line-height: 2em;
+	text-shadow: .05em .07em 0em  #4D4DBD;
+	font-weight: bolder;
+	transition: all .4s .1s ease;
+    position: relative;
+
+    &:after {
+		content: " ";
+		height: 1em;
+		width: 9.5em;
+		background-color: #5B5BD9;
+		position: absolute;
+		left: 11em;
+		top:1em;
+		opacity: 0;
+		z-index: -2;
+	}
+
+	&:hover {
+		padding-left: 11em;
+	}
+}
+
+.expansion-drawer:hover:after {
+	opacity: 1;
+	height: 8em;
+	transition: all .5s .4s ease;
+}
+
+
+/*Example 14 - hover and pseudo element drawing*/
+// Created a specific shape with css art, hover moves an arrow, 
+// and lights up second element
+
+
+// Full shape containers
+.measurement-container, 
+.measurement-container-two {
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+    cursor:pointer;
+    // Adds the 1 at the bottom of the left circle //
+    .measuring-bottom-number:before {
+        position: absolute;
+        bottom: -.4em;
+        left: 6.1em;
+        height: 20px;
+        width:20px;
+        content: attr(data-foo);
+        font-size: .78em;
+        color:#fff;
+        z-index: 3;
+    }
+}
+
+// On hover of the Gallon circle, quarts becomes visible after delay //
+.measurement-container:hover ~ .measurement-container-two {
+    opacity:1;
+    transition: .2s 1s all linear;
+}
+// On hover of Gallon circle, line moves down and to the right towads quarts circle //
+.measurement-container:hover ~ .measurement-line {
+    opacity: 1;
+    -webkit-transform: translate(95px, 115px);
+    transition: -webkit-transform 	1s 	linear,
+                		  opacity 	.2s linear;
+}
+
+// The "quarts" circle offset to the right //
+.measurement-container-two {
+    margin-left: 15%;
+    margin-top:.5em;
+    margin-top: 10em;
+    opacity:0;
+}
+// Provides the base "black" circle that is the foundation //
+.outer-measure-circle, 
+.outer-measure-circle-two {
+    height: 10em;
+    width: 10em;
+    border-radius: 100%;
+    background: #002;
+    position: relative;
+    // Provides the horizontal brown hash marks at the left and
+    // right edges of the circles 
+    &:before, 
+    &:after {
+        height: .3em;
+        width: 1.5em;
+        background: #70593F;
+        content:" ";
+        border: 1px solid #70593F;
+        position: absolute;
+        top:48%;
+    }
+    //aligns the right hash mark //
+    &:after {
+        right:0
+    }
+}
+// The inner brown circles //
+.inner-measure-circle, 
+.inner-measure-circle-two {
+    height: 8em;
+    width: 8em;
+    border-radius: 100%;
+    background: #70593F;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    text-align: center;   
+    // Provides the diagonal brown hash marks on the circles//
+    &:before, 
+    &:after {
+        height: .3em;
+        width: 1em;
+        background: #70593F;
+        content:" ";
+        border: 1px solid #70593F;
+        position: absolute;
+        top:88%; 
+    }
+    // left diagonal
+    &:before {
+        -webkit-transform: rotate(316deg);
+        left: .45em;      
+    }
+    // right diagonal
+    &:after {
+	    -webkit-transform: rotate(44deg);
+	    right: .45em;    
+	}
+	// the center text styles i.e. Gallon and quart 
+    .inner-measure-circle-text-styling, 
+    .inner-measure-circle-text-styling-two {
+        color: #fff;
+        margin-top: 2.3em;
+        font-size: 1.4em;
+    }
+}
+
+// Provides the sytling for the number 1's //
+.measure-circle-words {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    // the diagonal number "1" text styles and positions 
+    &:before, 
+    &:after {
+        height: 16px;
+        width: 16px;
+        background: transparent;
+        content:attr(data-foo);
+        color: #fff;
+        font-size:.5em;
+        position: absolute;
+        top:130%;  
+    }
+    // Left "1"
+    &:before {
+        left:-32%;  
+    }
+    // Right "1"
+    &:after {
+        right:-32%;  
+    }
+}
+
+// The Line that draws to the second circle
+.measurement-line {
+    position: absolute;
+    left:10em;
+    top:8em;
+    -webkit-transform: rotate(37deg);
+    opacity: 0;
+}
+
+
+/*Example 15 - loading-bar*/
+// A click box that will slowly load bars and switch the text //
+
+// Red background container //
+.background-loading {
+	height: 50px;
+	width: 200px;
+	background: red;
+	z-index: -10;
+	// Clickable hover container - Click causes other actions
+	.large-loading-box {
+		height: 50px;
+		width: 200px;
+		background: transparent;
+		z-index: 1;
+		position: relative;
+		// Active/click causes loading bars to fill to right
+		&:active .loading-bar {
+			width: 100%;
+			opacity: .85
+		}
+		// Active/click causes hidden text to appear
+		&:active .hidden-load-bar-text {
+			opacity: .75;
+			transition: all 1s linear;
+		}
+		// Active/click causes original text to hide/disappear
+		&:active .load-bar-text {
+			opacity: 0;
+			transition: all .1s linear;
+		}
+	}
+
+	// General loading bar attributes. White bars grow right
+	// with padding on click/active
+	.loading-bar {
+		position: absolute;
+		height: 20%;
+		width: 5%;
+		background: #fff;
+		opacity: 0;
+		transition: all 1.5s ease-in;
+	}
+	// Top bar position
+	.top-load-bar {
+		top:0;	
+	}
+	// Bottom bar position
+	.bottom-load-bar {
+		bottom:0;
+	}
+	// Original word - "Click here" styling and placement
+	.load-bar-text {
+		position: relative;
+		font: Helvetica;
+		color: #fff;
+		top:30%;
+		text-align: center;
+		opacity: .8;
+	}
+	// Swapped/hidden word - "Loading" styling and placement
+	.hidden-load-bar-text {
+		margin-top: -2%;
+		opacity: 0;
+		color: #fff;
+		text-align: center;
+	}
+}
+
+
+/*Example 16 - toggle switch */
+// Using a single checkbox to emulate a iOS toggle switch //
+
+//Creates a single click check box with no visible display
+input[type=checkbox] {
+	display: none;
+	// When checked, add a green background to label
+	&:checked + label {
+	    background: #4BD865;   
+	}
+	// When checked moved, the span off to the right
+	&:checked + label span {
+		left: 37px;
+	}
+}
+// Creates the background for the "toggle switch" 
+label {
+	float: left;
+	width: 65px; 
+    height: 29px;
+	border-radius: 14px;
+	display: block;
+	position: relative;
+	// Hides the checkbox text 
+	color: transparent;
+    background: #D8D9DB;
+	box-shadow: 0 0px 3px black;      
+    transition: .3s all ease;
+    // Creates the button for the switch
+    span {
+    	position: absolute; 
+    	width: 24px; 
+        height: 24px;
+        margin-top: 2px;
+        margin-left: 2px;
+    	content: "";
+    	background: #fff;
+    	display: block;
+    	border-radius: 50%;
+        box-shadow: 0 0 0 1px #fff;
+    	-webkit-transition: all .3s ease;
+    }
+}
+
+.ios-toggle-box-text {
+	margin-top: 20px;
+}
+
+/*Example 17 - exploding frame*/
+// A box with text that exmplodes outwards by scaling
+
+.explode {
+	height: 4em;
+	width: 4em;
+	background: transparent;
+	opacity: 1;
+	text-align: center;
+	border: 1px solid black;
+	transition: all .2s ease;
+
+	.explode-text {
+		margin-top: 20%;
+	}
+
+	&:hover {
+		opacity: 0;
+		-webkit-transform: scale(4);	
+	}
+}
+
+/*Example 18 - highlight box*/
+// A box with text that highlights on hover
+
+.highlight {
+	height: 3em;
+	width: 8em;
+	text-align: center;
+	background: #35414D;
+	padding:1em;
+	color: #000;
+	transition: all .5s linear;
+
+	&:hover {
+		background: #82c8ff;
+		color: #fff;
+	}
+
+	&:active {
+		background: #FE528C;
+	}
+}
+
+
+/*Example 19 - vistited*/
+// Modifies the look of visted links
+
+.link-box {
+	height: 4em;
+	width: 6em;
+	padding-top: 2em;
+	background: #7986CB;
+	text-align: center;
+	text-decoration: underline;
+
+	a {
+		color: #fff;
+	}
+
+	a:visited {
+		color: #000;
+	}
+}
+
+
+/*Example 20 -3d transform*/
+// A skewed box that flips around in 3d space upon click
+
+.twenty-three-dee {
+	height: 4em;
+	width: 4em;
+	border: 1px solid black;
+	background: blue;
+	-webkit-transform: rotateX(25deg) rotateY(44deg) rotateZ(25deg);
+	transition: all 1s linear;
+
+	&:active {
+		-webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+	}
+}
+
+/*Example 21 - card flip*/
+// A two sided card that flips horizontally on hover
+
+// flip is the 3d space for the card to flip in
+.flip {
+   width: 400px;
+   height: 200px;
+  	-webkit-perspective: 800;
+    position: relative;
+    // container to "hold" both card faces
+    .card {
+      width: 100%;
+      height: 100%;
+      -webkit-transform-style: preserve-3d;
+      -webkit-transition: 0.5s;
+      	// properties of both card faces
+    	.face {
+    		position: absolute;
+    		width: 100%;
+    		height: 100%;
+    		text-align: center;
+    		font-family: "Helvetica Neue";
+    		font-size: 3em;
+    		line-height: 200px;
+    		color: #fff;
+    		-webkit-backface-visibility: hidden ;
+    	}
+    	// front of card
+    	.front {
+    		position: absolute;
+    	    background: #4BD865;
+    	    color: white;
+    	    cursor: pointer;
+    		z-index: 1;
+    	}
+    	// back of card with backwards text to look right
+    	// when flipped 
+    	.back {
+    		-webkit-transform: rotateY(-180deg);
+    		background: #D8D9DB;   
+    	}
+
+    	&:hover {
+  			-webkit-transform: rotateY(-180deg);
+		}
+    }
+}
+
+/*Example 22 - color wheel*/
+// separate divs/balls that each have a unique color and opacity
+// also uses z-index
+
+.colorful-ball-container {
+	height: 9em;
+	width: 9em;
+	position: relative;
+	// general color ball properties
+	.color-ball {
+		position: absolute;
+		height: 5em;
+		width: 5em;
+		border-radius: 50%;
+		opacity: .45;
+	}
+
+	.ball-one {
+		top:0;
+		left: 2em;
+		background-color: red;
+		z-index: 7;
+	}
+
+	.ball-two {
+		top: 10%;
+		right:5%;
+		background-color: orange;
+		z-index: 5;
+	}
+
+	.ball-three {
+		bottom: 10%;
+		right: 5%;
+		background-color: yellow;
+		z-index: 4;
+	}
+
+	.ball-four {
+		bottom: 0;
+		left: 2em;
+		background-color: green;
+		z-index: 3;
+	}
+
+	.ball-five {
+		bottom: 10%;
+		left: 5%;
+		background-color: blue;
+		z-index: 2;
+	}
+
+	.ball-six {
+		top: 10%;
+		left: 5%;
+		background-color: purple;
+		z-index: 1;
+	}
+}
+
+/*Example 23 - nth child*/
+// An example of nth child selection
+
+.special-list {
+	font-family: Garamond;
+	font-weight: bold;
+	font-size: 18px;
+	color: blue;
+
+	li:nth-child(3) {
+		font-family: Helvetica;
+		color: red;
+		text-decoration: underline;
+		font-weight: 400;
+		list-style: none;
+	}
+}
+
+/*Example 24 - cursor effects */
+// Changes the cursor effect on hover
+
+
+.line-one {
+	cursor: default ;
+}
+
+.line-two {
+	cursor: pointer;	
+}
+
+.line-three {
+	cursor: wait;	
+}
+
+.line-four {
+	cursor: cell;	
+}
+
+.line-five {
+	cursor: crosshair;	
+}
+
+.line-six {
+	cursor: move;	
+}
+
+.line-seven {
+	cursor: not-allowed;	
+}
+
+/*Example twenty-five - */
+
+.border-box-example {
+	height: 160px;
+	width: 220px;
+	margin-bottom: 2em;
+	position: relative;
+	// two equal sized boxes, however one is hidden with opacity 0
+	// and uses the border-box model
+	.box-sizer, .box-sizer-hidden-text {
+		position: absolute;
+		height: 100px;
+		width: 100px;
+		padding: 20px;
+		border: 1px solid black;
+		background-color: #2CA7A6;
+		text-align: center;
+	    opacity: 1;
+		z-index: 1;
+	    transition: all 1s ease;
+	    // Hides orignal box to dislay one with the same
+	    // dimensions, but includes border box properties. 
+	    &:hover { 
+	    	opacity: 0;
+	    	z-index: -1;
+	    }
+	    // Displays the text that was hidden underneath in an identical sized box. 
+	    &:hover ~ .box-sizer-hidden-text {
+	    	opacity: 1;
+	    	z-index: 1;
+	    }
+	}
+
+	.box-sizer-hidden-text {
+	    z-index: -12;
+	    opacity: 0;
+	    -webkit-box-sizing: border-box; 
+		-moz-box-sizing: border-box;    
+		box-sizing: border-box; 
+	}
+}
+
+
+/*Example 26 - Skew transformation */
+// text box that skews to nothingness.
+
+.skew {
+	height: 100px;
+	width: 100px;
+	background-color: #EA9117;
+	text-align: center;
+	color: white;
+	transition: all 1s ease;
+
+	&:hover {
+	-webkit-transform: skew(45deg,45deg);
+	  		transform: skew(45deg,45deg);
+	}
+}
+
+/*Example 27 - disappearing box */
+// Box with text that shrinks away to nothing on hover
+
+.hide {
+	height: 100px;
+	width: 100px;
+	background-color: #E54E26;
+	color: white;
+	text-align: center;
+	transition: all 1s ease;
+
+	&:hover {
+		-webkit-transform: scale(0,0);
+	  			transform: scale(0,0);
+	}
+}
+
+/*Example twenty-eight - color changing box */
+// Box with text that changes color on hover
+
+.color-change {
+	height: 100px;
+	width: 100px;
+	background-color: #A4978E;
+	text-align: center;
+	color: #fff;
+	transition: all 1s ease;
+
+	&:hover {
+		background-color: #6C373F;
+	}
+}
+
+
+/*Example twenty-nine - shrinking box */
+// Box with text that shrinks to nothing on hover
+
+.shortening-box-container {
+	height: 140px;
+	width: 140px;
+
+	p {
+		margin-top: 5px; 
+	}
+}
+
+.condense {
+	position: absolute;
+	bottom:0;
+	height: 100px;
+	width: 100px;
+	color: #fff;
+	text-align: center;
+	transition: all 1s ease;
+	background-color: #028002;
+
+	&:hover{
+	  	height: 0px;
+	}
+}
+
+/*Example thirty - */
+
+.content-bar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 55px;
+	margin-left: -8px; 
+	background: red;
+	text-align: center;
+	opacity: .95;
+	z-index: 100;
+	font-size: 12px; 
+}
